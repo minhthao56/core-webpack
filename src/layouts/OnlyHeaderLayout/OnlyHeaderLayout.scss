@@ -1,0 +1,35 @@
+@import '../../assets/scss/variable.scss';
+
+.only-header {
+  width: 100%;
+  position: relative;
+  max-width: $screen-width;
+  min-height: 100vh;
+  background-color: #f3f3f3;
+
+  &__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  &__container {
+    width: 100%;
+    max-width: $screen-width;
+  }
+  &__center {
+    padding-top: 60px;
+    &--blur {
+      padding-top: 0px;
+      min-height: 100px;
+    }
+    &--noti {
+      padding-top: 0px;
+      min-height: 100px;
+    }
+  }
+}

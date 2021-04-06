@@ -1,0 +1,8 @@
+@import '../../assets/scss/variable.scss';
+.blank-layout {
+  background-color: #f3f3f3;
+  min-height: 100vh;
+  color: #343434;
+  width: 100%;
+  max-width: $screen-width;
+}
