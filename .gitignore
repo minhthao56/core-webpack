@@ -25,5 +25,4 @@ yarn-error.log*
 .netlify
 .vercel
 package-lock.json*
-webpack.config.ts*
 
