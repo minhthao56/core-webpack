@@ -3,6 +3,7 @@ import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import Dotenv from 'dotenv-webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const config: webpack.Configuration = {
   entry: ['@babel/polyfill', './src/index.tsx'],
@@ -51,6 +52,7 @@ const config: webpack.Configuration = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'public', 'index.html'),
+      favicon: path.join(__dirname, 'public/assets', 'favicon.ico'),
     }),
     new Dotenv({
       path: './.env',
@@ -64,6 +66,7 @@ const config: webpack.Configuration = {
       filename: 'public/[name].css',
       chunkFilename: '[id].css',
     }),
+    new CopyWebpackPlugin({ patterns: [{ from: 'public/assets' }] }),
   ],
 };
 export default config;
